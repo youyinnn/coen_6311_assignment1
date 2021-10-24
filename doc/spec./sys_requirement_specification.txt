@@ -1,0 +1,33 @@
+SRS 0.
+The system shall receive http request and maintain socket connection with multiple clent-end.
+    SRS 0.1 Http Service
+    SRS 0.2 WebSocket Service
+
+SRS 1. (main)
+The system shall maintain the relationship between client-ends or hardware chips.
+    SRS 1.1 User Information Management Module
+        1) user register;
+        2) login/logout;
+
+    SRS 1.2 Hardware Chip Information Management Module
+        1) chip register;
+        2) chip and user relationship association;
+
+SRS 2. (main)
+The system shall receive chips data instantly and organize them into database, 
+and those data shall be pushed to the corresponding clent-end device.
+    SRS 2.2 Chip Data Management Module
+        1) chip data reception;
+        2) chip data store;
+    SRS 2.1 Chip Data Push Module;
+
+SRS 3.
+The system shall be able to judge whether the chip-installed bike is at risk of stealing.
+    SRS 3.1 Chip Data Analysis Module
+        1) chip ata analysis;
+
+SRS 4.
+The system shall receive 'Parked' and 'Unparked' commands sent from a certain client-end 
+and associate them with the ressorted hardware chip instance.
+    SRS 4.1 Chip State Management Module 
+        1) set state to the chip;

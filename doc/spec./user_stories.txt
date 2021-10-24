@@ -1,13 +1,14 @@
 Stories:
-1. The user wants to track the GPS data of the bike, so he can know the real-time location of it.
+1. The user wants to track the GPS data of the bike which represent on a digital map,
+so he can know the real-time location of it.
 
 2. The user wants to know the speed of the bike, so he can know if he can catch the moving stolen bike.
 
 3. The user wants to set a 'Parked' state to the bike, 
-so the chip(micro-controller) will turn on the gyroscopic sensor.
+so the chip(micro-controller) would treat the any swing as a threat of stealing.
 
-4. The user wants to remove the 'Parked' state from the bike, 
-so the chip will turn off the gyroscopic sensor.
+4. The user wants to set the 'Unparked' state to the bike, 
+so the chip would not treat the swing perform by the user as a threat of stealing.
 
 5. The user wants to know if the bike was swinging or not, 
 so he can know if someone was attempting to move his bike or to break his lock.
