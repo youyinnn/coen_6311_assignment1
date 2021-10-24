@@ -1,0 +1,22 @@
+SRS 0.
+
+SRS 1. (main)
+The chip system shall receive the raw data sent from other sensors and adapt those raw data 
+into more structured data and send all structured data to the cloud server.
+    1) Data Process Module
+    2) Cloud Server Communication Module
+
+SRS 2. (main)
+The chip system shall be able to receive a state data sent from the cloud server 
+which represents a state of 'Parked' and 'Unparked' and store this state into the memory of the micro-controller.
+    1) State Management Module
+
+SRS 3. (main)
+The chip system shall be able to detect whether the bike is under the risk of stealing 
+based on the gyroscopic data.
+    1) Risk Detection Module
+
+SRS 4.
+The chip system shall sent a warning message to the cloud server to inform the user 
+that their bike is under the risk of stealing when the state is at 'Parked'.
+

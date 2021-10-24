@@ -19,7 +19,6 @@ and those data shall be analysed and pushed to the corresponding clent-end devic
     SRS 2.1 Chip Data Management Module
         1) chip data reception;
         2) chip data store;
-    SRS 2.2 Chip Data Analysis Module
     SRS 2.3 Chip Data Push Module;
 
 SRS 3.
