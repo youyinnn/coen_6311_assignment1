@@ -1,6 +1,6 @@
 INFO:  latexindent version 3.12, 2021-09-16, a script to indent .tex files
        latexindent lives here: /usr/local/texlive/2021/texmf-dist/scripts/latexindent/
-       Mon Oct 25 22:39:41 2021
+       Tue Oct 26 14:29:27 2021
        Filename: /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/main.tex
 INFO:  Processing switches:
        -w|--overwrite: Overwrite mode active, will make a back up of /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/main.tex first

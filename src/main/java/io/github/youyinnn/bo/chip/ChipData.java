@@ -1,8 +1,5 @@
 package io.github.youyinnn.bo.chip;
 
-import java.time.Instant;
-import java.time.LocalDateTime;
-
 /**
  * @author yinnnyou
  */
@@ -13,7 +10,6 @@ public class ChipData {
      * Millisecond timestamp
      */
     private Long timestamp;
-    private LocalDateTime localDateTime;
 
     public ChipData() {
     }
@@ -29,17 +25,6 @@ public class ChipData {
 
     public void setChipNo(String chipNo) {
         this.chipNo = chipNo;
-    }
-
-    public LocalDateTime getLocalDateTime() {
-        if (localDateTime == null) {
-            localDateTime = LocalDateTime.from(Instant.ofEpochMilli(timestamp));
-        }
-        return localDateTime;
-    }
-
-    public void setLocalDateTime(LocalDateTime localDateTime) {
-        this.localDateTime = localDateTime;
     }
 
     public Long getTimestamp() {

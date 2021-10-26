@@ -1,8 +1,27 @@
-\documentclass[transmag, conference, onecolumn]{IEEEtran}
+\documentclass[technote, transmag, onecolumn, 9pt]{IEEEtran}
+
+\makeatletter
+\long\def\@makecaption#1#2{\ifx\@captype\@IEEEtablestring%
+\footnotesize\begin{center}{\normalfont\footnotesize #1}\\
+{\normalfont\footnotesize\scshape #2}\end{center}%
+\@IEEEtablecaptionsepspace
+\else
+\@IEEEfigurecaptionsepspace
+\setbox\@tempboxa\hbox{\normalfont\footnotesize {#1.}~~ #2}%
+\ifdim \wd\@tempboxa >\hsize%
+\setbox\@tempboxa\hbox{\normalfont\footnotesize {#1.}~~ }%
+\parbox[t]{\hsize}{\normalfont\footnotesize \noindent\unhbox\@tempboxa#2}%
+\else
+\hbox to\hsize{\normalfont\footnotesize\hfil\box\@tempboxa\hfil}\fi\fi}
+\makeatother
 
 \usepackage{graphicx}
 
 \usepackage{csquotes}
+
+\usepackage{listings}
+
+% \usepackage{caption}
 
 \ifCLASSOPTIONcompsoc
 \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
@@ -12,15 +31,19 @@
 
 \usepackage[export]{adjustbox}
 
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
 \title{2021 FALL COEN6311 Assignment 1 Report}
 
-\author{
-    \IEEEauthorblockN{Jun Huang}
-    \IEEEauthorblockA{
-        40168167\\
-        Email: youyinnn@foxmail.com
-        }
-}
+% \author{
+%     \IEEEauthorblockN{Jun Huang}
+%     \IEEEauthorblockA{40168167\\Email: youyinnn@foxmail.com}
+% }
+
+\author{Jun Huang\\40168167\\Email: youyinnn@foxmail.com}
 
 \begin{document}
 
@@ -37,10 +60,10 @@ According to the project description, the user stories of the system can be list
 	      so he can know the real-time location of it.
 	\item The user wants to know the speed of the bike, so he can know if he can catch the moving stolen bike.
 
-	\item The user wants to set a \textbf{Parked} state to the bike,
+	\item The user wants to set a \textquote{Parked} state to the bike,
 	      so the chip(micro-controller) would treat the any swing as a threat of stealing.
 
-	\item The user wants to set the \textbf{Unparked} state to the bike,
+	\item The user wants to set the \textquote{Unparked} state to the bike,
 	      so the chip would not treat the swing perform by the user as a threat of stealing.
 
 	\item The user wants to know if the bike was swinging or not,
@@ -79,6 +102,8 @@ To fulfill the described software product, the overall product should contain at
 This report will focus on the \textit{Software on the Tracker Chip}
 but also present part of the \textit{Cloud Server System} which is just for supplementary notes.
 The \textit{Client Application} will not be presented.
+Notice the SRS of the cloud system will be marked as \textit{S-SRS} for distinction.
+
 More information of the system context architecture is shown in Fig. \ref{fig:sys-context}.
 
 \begin{figure}[!ht]
@@ -199,7 +224,11 @@ The defined incremental process is shon in Fig. \ref{fig:incre-process}.
 The process is consist of the techniques like \textquote{Incremental Planning} and
 \textquote{Test First Development} from the \textit{Extreme Programming}.
 
-The SRS 2 is chosen to practice the \textit{Incremental Process} with XP techniques.
+To perform the incremental process, a loop starts at step 4
+and ends with step 7 when no unfinished tasks are left on the storyboard.
+Every task will start from defining the test cases and then developing and validating.
+
+The SRS 2 is chosen to practice the incremental process with XP techniques.
 
 \begin{figure}[!ht]
 	\centering
@@ -210,6 +239,127 @@ The SRS 2 is chosen to practice the \textit{Incremental Process} with XP techniq
 
 \subsection*{\textbf{D5-Practice with the Extreme Programming}}
 
+\subsubsection*{\textbf{Story Cards}}
+
+Following the \textit{Incremental Planning} technique,
+SRS 2 can be partitioned as several story cards(tasks) which are shown in Table \ref{tb:1}.
+
+\begin{table}[!ht]
+	\renewcommand{\arraystretch}{1.5}
+	\caption{Story Cards(Tasks) of SRS 2}
+	\label{tb:1}
+	\centering
+	\begin{tabular}{l | L{3cm} | L{3cm} | L{5cm}}
+		\hline
+		\textbf{No.Title}    & \textbf{0. Mock Raw Data}                                                         & \textbf{1. Data Class Definition}           & \textbf{2. Build Raw Data into Json Data}             \\
+		\hline
+		\textbf{Description} & Mock the raw data which sent from the hareware sensors for unit test verification & Define classes which represent the raw data & A module to construct the raw data into the Json Data \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\subsubsection*{\textbf{Finish the Task}}
+
+\textit{Task 1} is chosen to be presented in this report.
+But to perform the unit test, mocked sensor raw data is needed.
+With the mock data, the console of the IDE will represent the display device
+that the client will use, and every raw data will be reconstructed to json data.
+This means that the task result will be validated manually
+by observing the console.
+
+\newpage
+\textbf{Task 0}
+
+\textit{Task 0} started first. As can be seen in Fig. \ref{fig:task0-testcase},
+the code will generate one raw data record of the GPS tracker. So as the raw data of accelerometer and the gyroscopic sensor.
+The code will be located in \textquote{src/test/java/io/github/youyinnn/bo/chip/RawDataMocker.java}.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.65\textwidth]{./img/f8-task0-testcase.png}
+	\caption{Tast Cases of Generating Raw Data of GPS Tracker}
+	\label{fig:task0-testcase}
+\end{figure}
+
+In the first loop, the raw data did not contain the timestamp, so the test cases are not fulfilled
+since those data are displayed in a real-time situation.
+So the second loop was started, and the incremental code is shown in Fig. \ref{fig:incre-code-1}.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./img/f12-incremental-code-1.png}
+	\caption{Revised Code which Generating Timestamp before the Raw Data}
+	\label{fig:incre-code-1}
+\end{figure}
+
+The revised sample of the raw data is shown in \ref{fig:raw-data-sample}.
+Those data are located in \textquote{src/main/resources/data\_samples}.
+
+
+\textbf{Task 1}
+
+\begin{itemize}
+	\item \textbf{Test cases:} The test case for task 1 can be defined as Fig. \ref{fig:test-code-t1} is shown. Its location is \textquote{src/test/java/io/github/youyinnn/module/chip/ChipDataProcessorImplTest.java}.
+
+	\item \textbf{Code implementations:} After test cases defined, then the implementation of the \textit{ChipDataProcessor} was implemented
+	      which is \textit{ChipDataProcessorImpl} and is shown in Fig. \ref{fig:intf-impl}. The corresponding class diagram of the data objects is shown in Fig. \ref{fig:class-diagram}.
+	      And their implementations are located in \textquote{src/main/java/io/github/youyinnn/bo/chip}.
+
+	\item \textbf{Validation:} After all the implementations were done, the test units were executed and they were all passed(shown in Fig. \ref{fig:test-result}).
+	      This means the task 1 was completed and the loop for this task was finished.
+\end{itemize}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./img/f19-t1-test-result.png}
+	\caption{Result of the Unit Test of Task 1}
+	\label{fig:test-result}
+\end{figure}
+
+\begin{figure*}[!ht]
+	\centering
+	\subfloat[Raw Data of GPS Tracker]{\includegraphics[width=3.3in, valign=m]{./img/f9-gps-data-sample.png}
+		\label{fig:gps-data}}
+	\hfil
+	\hspace{0.2in}
+	\subfloat[Raw Data of Accelerometer]{\includegraphics[width=3in, valign=m]{./img/f10-speed-data-sample.png}
+		\label{fig:speed-data}}
+	\vspace{0.2in}
+	\subfloat[Raw Data of Gyroscopic Sensor]{\includegraphics[width=3.8in, valign=m]{./img/f11-gyroscopic-data-sample.png}
+		\label{fig:gy-data}}
+	\caption{Mocked Raw Data}
+	\label{fig:raw-data-sample}
+\end{figure*}
+
+\begin{figure}[!htp]
+	\centering
+	\subfloat[\textit{ChipDataProcessor} Interface]{\includegraphics[width=4in, valign=m]{./img/f16-t1-testcase-4-intf.png}
+		\label{fig:t1-intf}}
+	\hfil
+	\subfloat[Preparing the Raw Data]{\includegraphics[width=4.4in, valign=m]{./img/f14-t1-testcase-2-preparation.png}
+		\label{fig:t1-preparation}}
+	\hfil
+	\subfloat[Assertion of the Test Unit]{\includegraphics[width=3.8in, valign=m]{./img/f15-t1-testcase-3-equal.png}
+		\label{fig:t1-assertion}}
+	\subfloat[Test Unit]{\includegraphics[width=3.2in, valign=m]{./img/f13-t1-testcase-1-test-unit.png}
+		\label{fig:t1-test-unit}}
+	\caption{Tast Case Code of Task 1}
+	\label{fig:test-code-t1}
+\end{figure}
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{./img/f18-intf-impl.png}
+	\caption{Implementation of the Interface \textit{ChipDataProcessor}}
+	\label{fig:intf-impl}
+\end{figure}
+
+\begin{figure}[!htp]
+	\centering
+	\includegraphics[width=0.6\textwidth]{./img/f17-class-diagram.png}
+	\caption{Class Diagram of the Data Objects}
+	\label{fig:class-diagram}
+\end{figure}
 
 \end{document}
 \endinput

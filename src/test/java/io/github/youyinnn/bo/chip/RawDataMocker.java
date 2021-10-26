@@ -12,11 +12,12 @@ public class RawDataMocker {
      */
     private static final String TOP_LATITUDE = "45";
     private static final String TOP_LONGITUDE = "-73";
-
     private static final Random RANDOM = new Random();
-
     private static final int GPS_MANTISSA_LENGTH = 15;
 
+    /**
+     * Mocking the mantissa with the length of 'mantissaLength'
+     */
     private static String getMantissa(final int mantissaLength) {
         StringJoiner sj = new StringJoiner("");
         for (int i = 0; i < mantissaLength; i++) {
@@ -27,6 +28,8 @@ public class RawDataMocker {
     }
 
     private static String mockGpsData() {
+        // mocking gps raw data like:
+        // -73.807329854301666 45.206528409572911
         return TOP_LONGITUDE + "." + getMantissa(GPS_MANTISSA_LENGTH) + " "
                 + TOP_LATITUDE + "." + getMantissa(GPS_MANTISSA_LENGTH) + (System.lineSeparator());
     }
@@ -53,11 +56,11 @@ public class RawDataMocker {
         if (setSize == 0)
             setSize++;
         for (int i = 0; i < setSize; i++) {
-            sj.add(String.valueOf(System.currentTimeMillis()));
+            sj.add(String.valueOf(System.currentTimeMillis())); // incremental part in loop 2: adding timestamp
             sj.add(" ");
             sj.add(mockGpsData());
             try {
-                Thread.sleep(RANDOM.nextInt(30 * 100));
+                Thread.sleep(RANDOM.nextInt(30 * 100)); // incremental part in loop 2: mocking the time delay
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

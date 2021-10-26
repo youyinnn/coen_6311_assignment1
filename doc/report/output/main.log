@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.29)  25 OCT 2021 22:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.29)  26 OCT 2021 14:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -25,7 +25,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 -- Using 8.5in x 11in (letter) paper.
 -- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen141
--- This is a 10 point document.
+-- This is a 9 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen142
 \CLASSINFOnormalsizeunitybaselineskip=\dimen143
 \IEEEnormaljot=\dimen144
@@ -41,6 +41,10 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8.5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
@@ -49,13 +53,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <14> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
@@ -64,10 +64,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 \IEEEquantizedlength=\dimen145
 \IEEEquantizedlengthdiff=\dimen146
@@ -141,32 +137,54 @@ Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-)) (/usr/local/texlive/2021/texmf-dist/tex/latex/subfig/subfig.sty
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count267
+\lst@gtempboxa=\box49
+\lst@token=\toks18
+\lst@length=\count268
+\lst@currlwidth=\dimen164
+\lst@column=\count269
+\lst@pos=\count270
+\lst@lostspace=\dimen165
+\lst@width=\dimen166
+\lst@newlines=\count271
+\lst@lineno=\count272
+\lst@maxwidth=\dimen167
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count273
+\lst@skipnumbers=\count274
+\lst@framebox=\box50
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
  (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen164
-\captionmargin@=\dimen165
-\captionwidth=\dimen166
-\caption@tempdima=\dimen167
-\caption@indent=\dimen168
-\caption@parindent=\dimen169
-\caption@hangindent=\dimen170
+\captionmargin=\dimen168
+\captionmargin@=\dimen169
+\captionwidth=\dimen170
+\caption@tempdima=\dimen171
+\caption@indent=\dimen172
+\caption@parindent=\dimen173
+\caption@hangindent=\dimen174
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
-Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\normalfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONconference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi \fi  on input line 1139.
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEtablestring \footnotesize \begin {center}{\normalfont \footnotesize #1}\\ {\normalfont \footnotesize \scshape #2}\end {center}\@IEEEtablecaptionsepspace \else \@IEEEfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}~~ #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}~~ }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }\fi \fi  on input line 1139.
 )
-\c@KVtest=\count267
+\c@KVtest=\count275
 \sf@farskip=\skip50
-\sf@captopadj=\dimen171
+\sf@captopadj=\dimen175
 \sf@capskip=\skip51
 \sf@nearskip=\skip52
-\c@subfigure=\count268
-\c@subfigure@save=\count269
-\c@lofdepth=\count270
-\c@subtable=\count271
-\c@subtable@save=\count272
-\c@lotdepth=\count273
+\c@subfigure=\count276
+\c@subfigure@save=\count277
+\c@lofdepth=\count278
+\c@subtable=\count279
+\c@subtable@save=\count280
+\c@lotdepth=\count281
 \sf@top=\skip53
 \sf@bottom=\skip54
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjustbox.sty
@@ -174,10 +192,10 @@ Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
  (/usr/local/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks18
-\XKV@tempa@toks=\toks19
+\XKV@toks=\toks19
+\XKV@tempa@toks=\toks20
 )
-\XKV@depth=\count274
+\XKV@depth=\count282
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
@@ -185,147 +203,211 @@ Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
  (/usr/local/texlive/2021/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box49
+\collectedbox=\box51
 )
-\tc@llx=\dimen172
-\tc@lly=\dimen173
-\tc@urx=\dimen174
-\tc@ury=\dimen175
+\tc@llx=\dimen176
+\tc@lly=\dimen177
+\tc@urx=\dimen178
+\tc@ury=\dimen179
 Package trimclip Info: Using driver 'tc-pdftex.def'.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen176
-\adjbox@Height=\dimen177
-\adjbox@Depth=\dimen178
-\adjbox@Totalheight=\dimen179
-\adjbox@pwidth=\dimen180
-\adjbox@pheight=\dimen181
-\adjbox@pdepth=\dimen182
-\adjbox@ptotalheight=\dimen183
+\adjbox@Width=\dimen180
+\adjbox@Height=\dimen181
+\adjbox@Depth=\dimen182
+\adjbox@Totalheight=\dimen183
+\adjbox@pwidth=\dimen184
+\adjbox@pheight=\dimen185
+\adjbox@pdepth=\dimen186
+\adjbox@ptotalheight=\dimen187
  (/usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count275
+\c@checkoddpage=\count283
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box50
-\sift@deathcycles=\count276
-\@vwid@loff=\dimen184
-\@vwid@roff=\dimen185
-))
+\@vwid@box=\box52
+\sift@deathcycles=\count284
+\@vwid@loff=\dimen188
+\@vwid@roff=\dimen189
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen190
+\ar@mcellbox=\box53
+\extrarowheight=\dimen191
+\NC@list=\toks21
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box54
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count277
-\l__pdf_internal_box=\box51
+\l__color_backend_stack_int=\count285
+\l__pdf_internal_box=\box55
 ) (/Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/output/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 
--- Lines per column: 56 (exact).
+-- Lines per column: 63 (exact).
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count278
-\scratchdimen=\dimen186
-\scratchbox=\box52
-\nofMPsegments=\count279
-\nofMParguments=\count280
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count281
-\MPscratchDim=\dimen187
-\MPnumerator=\count282
-\makeMPintoPDFobject=\count283
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count286
+\scratchdimen=\dimen192
+\scratchbox=\box56
+\nofMPsegments=\count287
+\nofMParguments=\count288
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count289
+\MPscratchDim=\dimen193
+\MPnumerator=\count290
+\makeMPintoPDFobject=\count291
+\everyMPtoPDFconversion=\toks23
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+\c@lstlisting=\count292
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 <./img/f1-use-cases.png, id=1, 2517.405pt x 851.18pt>
 File: ./img/f1-use-cases.png Graphic file (type png)
 <use ./img/f1-use-cases.png>
-Package pdftex.def Info: ./img/f1-use-cases.png  used on input line 57.
+Package pdftex.def Info: ./img/f1-use-cases.png  used on input line 80.
 (pdftex.def)             Requested size: 412.80157pt x 139.56844pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 70.
+(Font)              <9> on input line 93.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 70.
+(Font)              <6> on input line 93.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 93.
 <./img/f2-sys-context.png, id=3, 2790.425pt x 1280.785pt>
 File: ./img/f2-sys-context.png Graphic file (type png)
 <use ./img/f2-sys-context.png>
-Package pdftex.def Info: ./img/f2-sys-context.png  used on input line 86.
+Package pdftex.def Info: ./img/f2-sys-context.png  used on input line 111.
 (pdftex.def)             Requested size: 412.80157pt x 189.47113pt.
  [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/f1-use-cases.png>]
 <./img/f3-chip-sys-architecture.png, id=15, 1489.565pt x 959.585pt>
 File: ./img/f3-chip-sys-architecture.png Graphic file (type png)
 <use ./img/f3-chip-sys-architecture.png>
-Package pdftex.def Info: ./img/f3-chip-sys-architecture.png  used on input line 168.
+Package pdftex.def Info: ./img/f3-chip-sys-architecture.png  used on input line 193.
 (pdftex.def)             Requested size: 274.6262pt x 176.90547pt.
 <./img/f4-cloud-sys-architecture.png, id=16, 1208.515pt x 1292.83pt>
 File: ./img/f4-cloud-sys-architecture.png Graphic file (type png)
 <use ./img/f4-cloud-sys-architecture.png>
-Package pdftex.def Info: ./img/f4-cloud-sys-architecture.png  used on input line 174.
+Package pdftex.def Info: ./img/f4-cloud-sys-architecture.png  used on input line 199.
 (pdftex.def)             Requested size: 216.81pt x 231.93001pt.
 <./img/f5-activity-diagram-1.png, id=17, 1943.26pt x 2115.905pt>
 File: ./img/f5-activity-diagram-1.png Graphic file (type png)
 <use ./img/f5-activity-diagram-1.png>
-Package pdftex.def Info: ./img/f5-activity-diagram-1.png  used on input line 187.
+Package pdftex.def Info: ./img/f5-activity-diagram-1.png  used on input line 212.
 (pdftex.def)             Requested size: 274.6262pt x 299.00128pt.
 <./img/f6-activity-diagram-2png.png, id=18, 1208.515pt x 1152.305pt>
 File: ./img/f6-activity-diagram-2png.png Graphic file (type png)
 <use ./img/f6-activity-diagram-2png.png>
-Package pdftex.def Info: ./img/f6-activity-diagram-2png.png  used on input line 191.
+Package pdftex.def Info: ./img/f6-activity-diagram-2png.png  used on input line 216.
 (pdftex.def)             Requested size: 216.81pt x 206.72021pt.
 <./img/f7-incremental-process.png, id=19, 2886.785pt x 2268.475pt>
 File: ./img/f7-incremental-process.png Graphic file (type png)
 <use ./img/f7-incremental-process.png>
-Package pdftex.def Info: ./img/f7-incremental-process.png  used on input line 206.
+Package pdftex.def Info: ./img/f7-incremental-process.png  used on input line 235.
 (pdftex.def)             Requested size: 464.39685pt x 364.90181pt.
- [2 <./img/f2-sys-context.png>]
-
-** Conference Paper **
-Before submitting the final camera ready copy, remember to:
-
- 1. Manually equalize the lengths of two columns on the last page
- of your paper;
-
- 2. Ensure that any PostScript and/or PDF output post-processing
- uses only Type 1 fonts and that every step in the generation
- process uses the appropriate paper size.
-
-[3 <./img/f3-chip-sys-architecture.png> <./img/f4-cloud-sys-architecture.png> <./img/f5-activity-diagram-1.png> <./img/f6-activity-diagram-2png.png>] [4 <./img/f7-incremental-process.png>] (/Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/output/main.aux) ) 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 252.
+ [2 <./img/f2-sys-context.png>] [3 <./img/f3-chip-sys-architecture.png> <./img/f4-cloud-sys-architecture.png> <./img/f5-activity-diagram-1.png> <./img/f6-activity-diagram-2png.png>]
+<./img/f8-task0-testcase.png, id=31, 707.64375pt x 474.77374pt>
+File: ./img/f8-task0-testcase.png Graphic file (type png)
+<use ./img/f8-task0-testcase.png>
+Package pdftex.def Info: ./img/f8-task0-testcase.png  used on input line 279.
+(pdftex.def)             Requested size: 335.39685pt x 225.02724pt.
+ [4 <./img/f7-incremental-process.png> <./img/f8-task0-testcase.png>]
+<./img/f12-incremental-code-1.png, id=37, 824.07875pt x 315.1775pt>
+File: ./img/f12-incremental-code-1.png Graphic file (type png)
+<use ./img/f12-incremental-code-1.png>
+Package pdftex.def Info: ./img/f12-incremental-code-1.png  used on input line 290.
+(pdftex.def)             Requested size: 412.80157pt x 157.88171pt.
+<./img/f19-t1-test-result.png, id=38, 922.44624pt x 253.94875pt>
+File: ./img/f19-t1-test-result.png Graphic file (type png)
+<use ./img/f19-t1-test-result.png>
+Package pdftex.def Info: ./img/f19-t1-test-result.png  used on input line 314.
+(pdftex.def)             Requested size: 412.80157pt x 113.64426pt.
+<./img/f9-gps-data-sample.png, id=39, 515.9275pt x 306.14375pt>
+File: ./img/f9-gps-data-sample.png Graphic file (type png)
+<use ./img/f9-gps-data-sample.png>
+Package pdftex.def Info: ./img/f9-gps-data-sample.png  used on input line 322.
+(pdftex.def)             Requested size: 238.49121pt x 141.51451pt.
+<./img/f10-speed-data-sample.png, id=40, 474.77374pt x 309.155pt>
+File: ./img/f10-speed-data-sample.png Graphic file (type png)
+<use ./img/f10-speed-data-sample.png>
+Package pdftex.def Info: ./img/f10-speed-data-sample.png  used on input line 326.
+(pdftex.def)             Requested size: 216.81pt x 141.17992pt.
+<./img/f11-gyroscopic-data-sample.png, id=41, 650.43pt x 309.155pt>
+File: ./img/f11-gyroscopic-data-sample.png Graphic file (type png)
+<use ./img/f11-gyroscopic-data-sample.png>
+Package pdftex.def Info: ./img/f11-gyroscopic-data-sample.png  used on input line 329.
+(pdftex.def)             Requested size: 274.6262pt x 130.53293pt.
+<./img/f16-t1-testcase-4-intf.png, id=42, 658.46pt x 205.76875pt>
+File: ./img/f16-t1-testcase-4-intf.png Graphic file (type png)
+<use ./img/f16-t1-testcase-4-intf.png>
+Package pdftex.def Info: ./img/f16-t1-testcase-4-intf.png  used on input line 337.
+(pdftex.def)             Requested size: 289.07999pt x 90.33757pt.
+<./img/f14-t1-testcase-2-preparation.png, id=43, 696.6025pt x 499.8675pt>
+File: ./img/f14-t1-testcase-2-preparation.png Graphic file (type png)
+<use ./img/f14-t1-testcase-2-preparation.png>
+Package pdftex.def Info: ./img/f14-t1-testcase-2-preparation.png  used on input line 340.
+(pdftex.def)             Requested size: 317.98755pt x 228.17992pt.
+<./img/f15-t1-testcase-3-equal.png, id=44, 660.4675pt x 403.5075pt>
+File: ./img/f15-t1-testcase-3-equal.png Graphic file (type png)
+<use ./img/f15-t1-testcase-3-equal.png>
+Package pdftex.def Info: ./img/f15-t1-testcase-3-equal.png  used on input line 343.
+(pdftex.def)             Requested size: 274.6262pt x 167.78497pt.
+<./img/f13-t1-testcase-1-test-unit.png, id=45, 558.085pt x 262.9825pt>
+File: ./img/f13-t1-testcase-1-test-unit.png Graphic file (type png)
+<use ./img/f13-t1-testcase-1-test-unit.png>
+Package pdftex.def Info: ./img/f13-t1-testcase-1-test-unit.png  used on input line 345.
+(pdftex.def)             Requested size: 231.26378pt x 108.97517pt.
+<./img/f18-intf-impl.png, id=46, 726.715pt x 548.0475pt>
+File: ./img/f18-intf-impl.png Graphic file (type png)
+<use ./img/f18-intf-impl.png>
+Package pdftex.def Info: ./img/f18-intf-impl.png  used on input line 352.
+(pdftex.def)             Requested size: 361.19843pt x 272.40074pt.
+<./img/f17-class-diagram.png, id=47, 1774.63pt x 915.42pt>
+File: ./img/f17-class-diagram.png Graphic file (type png)
+<use ./img/f17-class-diagram.png>
+Package pdftex.def Info: ./img/f17-class-diagram.png  used on input line 359.
+(pdftex.def)             Requested size: 309.60315pt x 159.69804pt.
+ [5 <./img/f12-incremental-code-1.png> <./img/f19-t1-test-result.png>] [6 <./img/f9-gps-data-sample.png> <./img/f10-speed-data-sample.png> <./img/f11-gyroscopic-data-sample.png>] [7 <./img/f16-t1-testcase-4-intf.png> <./img/f14-t1-testcase-2-preparation.png> <./img/f15-t1-testcase-3-equal.png> <./img/f13-t1-testcase-1-test-unit.png>] [8 <./img/f18-intf-impl.png> <./img/f17-class-diagram.png>] (/Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/output/main.aux) ) 
 Here is how much of TeX's memory you used:
- 4963 strings out of 478994
- 86629 string characters out of 5858184
- 397291 words of memory out of 5000000
- 22419 multiletter control sequences out of 15000+600000
- 433962 words of font info for 76 fonts, out of 8000000 for 9000
+ 6479 strings out of 478994
+ 109490 string characters out of 5858184
+ 419988 words of memory out of 5000000
+ 23896 multiletter control sequences out of 15000+600000
+ 438499 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,9n,74p,275b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/output/main.pdf (4 pages, 953917 bytes).
+ 68i,9n,74p,323b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/output/main.pdf (8 pages, 2270211 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 

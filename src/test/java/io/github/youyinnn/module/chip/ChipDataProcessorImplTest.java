@@ -27,8 +27,10 @@ class ChipDataProcessorImplTest {
     private static String accelerometerDataString;
 
     private static final Gson gson = new Gson();
+    // the implementation of the interface ChipDataProcessor
     private static final ChipDataProcessor chipDataProcessor = new ChipDataProcessorImpl();
 
+    // get mocked raw data as string
     private static String getFileString(final String filePath) throws IOException {
         final URL url = classLoader.getResource(filePath);
         assert url != null;
@@ -36,6 +38,7 @@ class ChipDataProcessorImplTest {
         return Files.readString(file.toPath());
     }
 
+    // retrieve all raw data from files before all test cases was started
     @BeforeAll
     public static void beforeAll() throws IOException {
         gpsDataString = getFileString("data_samples/gps.data");
@@ -45,24 +48,21 @@ class ChipDataProcessorImplTest {
 
     private void compareGpsDataJson(String rawData, GpsData gpsData) {
         final String[] part = rawData.split(" ");
-        String sj = "{\"timestamp\":" +
-                part[0] +
-                "," +
-                "\"chipNo\":\"" +
-                CHIP_NO +
-                "\"," +
-                "\"lon\":" +
-                part[1] +
-                "," +
-                "\"lat\":" +
-                part[2] +
-                "}";
+        // build json data manually
+        String sj = "{\"timestamp\":" + part[0] + "," +
+                "\"chipNo\":\"" + CHIP_NO + "\"," +
+                "\"lon\":" + part[1] + "," +
+                "\"lat\":" + part[2] +"}";
 
+        // transfer manually built json data string into JsonElement
         final JsonElement jsonElementFromRawData
                 = JsonParser.parseString(sj);
+
+        // transfer gpsData object which read from the data file into JsonElement
         final JsonElement jsonElementFromProcessor
                 = JsonParser.parseString(gson.toJson(gpsData));
 
+        // assert they were the same
         Assertions.assertEquals(
                 jsonElementFromRawData,
                 jsonElementFromProcessor
@@ -122,15 +122,17 @@ class ChipDataProcessorImplTest {
         );
     }
 
+    /**
+     * Test unit for validating the GPS data
+     */
     @Test
     void rawDataToGpsDataObjectTest() {
-
         final String[] split = gpsDataString.split(System.lineSeparator());
 
         for (String one : split) {
             final GpsData gpsData
                     = chipDataProcessor.rawDataToGpsDataObject(CHIP_NO, one);
-
+            // compare 1 by 1
             compareGpsDataJson(one, gpsData);
         }
     }
@@ -161,7 +163,4 @@ class ChipDataProcessorImplTest {
 
     }
 
-    @Test
-    void toOuterMessage() {
-    }
 }
