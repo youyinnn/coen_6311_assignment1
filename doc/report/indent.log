@@ -1,0 +1,28 @@
+INFO:  latexindent version 3.12, 2021-09-16, a script to indent .tex files
+       latexindent lives here: /usr/local/texlive/2021/texmf-dist/scripts/latexindent/
+       Mon Oct 25 22:39:41 2021
+       Filename: /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/main.tex
+INFO:  Processing switches:
+       -w|--overwrite: Overwrite mode active, will make a back up of /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/main.tex first
+INFO:  Directory for backup files and indent.log: /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report
+INFO:  YAML settings read: defaultSettings.yaml
+       Reading defaultSettings.yaml from /usr/local/texlive/2021/texmf-dist/scripts/latexindent/defaultSettings.yaml
+INFO:  YAML settings read: indentconfig.yaml or .indentconfig.yaml
+       Home directory is /Users/yinnnyou (didn't find either indentconfig.yaml or .indentconfig.yaml)
+       To specify user settings you would put indentconfig.yaml here: /Users/yinnnyou/indentconfig.yaml
+       Alternatively, you can use the hidden file .indentconfig.yaml as: /Users/yinnnyou/.indentconfig.yaml
+INFO:  Backup procedure (-w flag active):
+       you set maxNumberOfBackUps=1, so I'm setting onlyOneBackUp: 1 
+       copying /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/main.tex to /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/main.bak
+       /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/main.bak was overwritten (see onlyOneBackUp)
+       Backup file: /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/main.bak
+       /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/main.tex will be overwritten after indentation
+INFO:  Phase 1: searching for objects
+INFO:  Phase 2: finding surrounding indentation
+INFO:  Phase 3: indenting objects
+INFO:  Phase 4: final indentation check
+INFO:  Output routine:
+       Overwriting file /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/main.tex
+       --------------
+INFO:  Please direct all communication/issues to:
+        https://github.com/cmhughes/latexindent.pl

@@ -1,0 +1,215 @@
+\documentclass[transmag, conference, onecolumn]{IEEEtran}
+
+\usepackage{graphicx}
+
+\usepackage{csquotes}
+
+\ifCLASSOPTIONcompsoc
+\usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+\else
+\usepackage[caption=false,font=footnotesize]{subfig}
+\fi
+
+\usepackage[export]{adjustbox}
+
+\title{2021 FALL COEN6311 Assignment 1 Report}
+
+\author{
+    \IEEEauthorblockN{Jun Huang}
+    \IEEEauthorblockA{
+        40168167\\
+        Email: youyinnn@foxmail.com
+        }
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Deliverable Specification}
+
+\subsection*{\textbf{D1-User Stories and Use Cases}}
+
+According to the project description, the user stories of the system can be listed as follow:
+
+\begin{enumerate}
+	\item The user wants to track the GPS data of the bike which represent on a digital map,
+	      so he can know the real-time location of it.
+	\item The user wants to know the speed of the bike, so he can know if he can catch the moving stolen bike.
+
+	\item The user wants to set a \textbf{Parked} state to the bike,
+	      so the chip(micro-controller) would treat the any swing as a threat of stealing.
+
+	\item The user wants to set the \textbf{Unparked} state to the bike,
+	      so the chip would not treat the swing perform by the user as a threat of stealing.
+
+	\item The user wants to know if the bike was swinging or not,
+	      so he can know if someone was attempting to move his bike or to break his lock.
+
+	\item The user wants to get the real-time notifications which described above,
+	      so he can know the state of the bike immediately.
+\end{enumerate}
+
+The use cases diagram is shown in Fig. \ref{fig:use-cases}.
+
+\begin{figure}[!hb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./img/f1-use-cases.png}
+	\caption{System Use Cases}
+	\label{fig:use-cases}
+\end{figure}
+
+\subsection*{\textbf{D2-Software Requirement Specification}}
+
+Based on the user scenairo and the use cases,
+the software shall have the following software requirement specifications and their sub-requirements.
+
+To fulfill the described software product, the overall product should contain at least 3 software systems:
+
+\begin{itemize}
+	\item \textit{Software on the Tracker Chip}: which will be installed in the hardware chip to perform tracking features
+	      and send sensor data to the remote server.
+	\item \textit{Cloud Server System}: which will be deployed on the cloud server and receive data from users' chips
+	      then forwarding those data to users' applications.
+	\item \textit{Client Application}: which will be installed on users' mobile devices
+	      then receive and display the data or notification from the server,
+	      and also will send instructions to the corresponding chips.
+\end{itemize}
+
+This report will focus on the \textit{Software on the Tracker Chip}
+but also present part of the \textit{Cloud Server System} which is just for supplementary notes.
+The \textit{Client Application} will not be presented.
+More information of the system context architecture is shown in Fig. \ref{fig:sys-context}.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{./img/f2-sys-context.png}
+	\caption{System Context Architecture}
+	\label{fig:sys-context}
+\end{figure}
+
+\subsubsection*{\textbf{SRS for the Software on the Tracker Chip}}
+
+Total of 4 SRS are defined for the \textit{Software on the Tracker Chip}.
+In the scope of the assignment report, SRS 1, 2 and 3 are expanded with sub-requirements.
+
+\begin{itemize}
+	\item \textit{SRS 1.} The chip system shall receive the raw data sent from other sensors and adapt those raw data
+	      into more structured data and send all structured data to the cloud server.
+	      \begin{itemize}
+		      \item [\textit{1.1}] \textit{Data Process Module:} this module shall handle the message construction part.
+		            The module shall collect the raw data from 3 hardware components
+		            and build them into a json format data.
+		      \item [\textit{1.2}] \textit{Cloud Server Communication Module:} this module shall handle the communication part.
+		            The module shall be able to receive message from the cloud server
+		            and send json data described above to the server.
+	      \end{itemize}
+
+	\item \textit{SRS 2.} The chip system shall be able to receive a state data sent from the cloud server
+	      which represents a state of \textit{Parked} and \textit{Unparked} and store this state into the memory of the micro-controller.
+	      \begin{itemize}
+		      \item [\textit{2.1}] \textit{State Management Module:} this module shall set the states described above into the chip.
+	      \end{itemize}
+
+	\item \textit{SRS 3.} The chip system shall be able to detect whether the bike is under the risk of stealing
+	      based on the gyroscopic data.
+	      \begin{itemize}
+		      \item [\textit{3.1}] \textit{Risk Detection Module:} this module shall be able to estimate the risk level
+		            based on the gyroscopic data.
+	      \end{itemize}
+
+	\item \textit{SRS 4.} The chip system shall sent a warning message to the cloud server to inform the user
+	      that their bike is under the risk of stealing when the state is at \textit{Parked}.
+\end{itemize}
+
+
+\subsubsection*{\textbf{SRS for the Cloud Server System}}
+
+\begin{itemize}
+	\item \textit{S-SRS 1.} The server system shall receive http request
+	      and maintain socket connection with multiple clent-end.
+
+	\item \textit{S-SRS 2.} The system shall maintain the relationship between client-ends or hardware chips.
+
+	\item \textit{S-SRS 3.} The system shall receive chips data instantly and organize them into database,
+	      and those data shall be analysed and pushed to the corresponding clent-end device.
+
+	\item \textit{S-SRS 4.} The system shall receive 'Parked' and 'Unparked' commands sent from a certain client-end
+	      and associate them with the ressorted hardware chip instance.
+\end{itemize}
+
+\subsection*{\textbf{D3-System Design}}
+
+\subsubsection*{\textbf{System Architectures}}
+
+A top-down layer system architecture of the \textit{Software on the Tracker Chip} is shown in Fig. \ref{fig:chip-sys-arch}.
+The objects with vertical layer position mean that the top layer depends on the bottom layer.
+Notice that the obejcts in the gray box mean that they do not have hierarchy or layer relationship, they are in the same architecture level.
+
+% \begin{figure}[!ht]
+% 	\centering
+% 	\includegraphics[width=0.6\textwidth]{./img/f3-chip-sys-architecture.png}
+% 	\caption{Architecture of the \textit{Software on the Tracker Chip}}
+% 	\label{fig:chip-sys-arch}
+% \end{figure}
+
+Then a same top-down layer system architecture of the \textit{Cloud Server System} is shown in Fig \ref{fig:cloud-sys-arch}.
+
+% \begin{figure}[!ht]
+% 	\centering
+% 	\includegraphics[width=0.6\textwidth]{./img/f4-cloud-sys-architecture.png}
+% 	\caption{Architecture of the \textit{Cloud Server System}}
+% 	\label{fig:cloud-sys-arch}
+% \end{figure}
+
+\begin{figure*}[!ht]
+	\centering
+	\subfloat[Architecture of the \textit{Software on the Tracker Chip}]
+	{\includegraphics[width=3.8in, valign=m]{./img/f3-chip-sys-architecture.png}}
+	\label{fig:chip-sys-arch}
+	\hfil
+	\hspace{0.2in}
+	\subfloat[Architecture of the \textit{Cloud Server System}]
+	{\includegraphics[width=3in, valign=m]{./img/f4-cloud-sys-architecture.png}
+		\label{fig:cloud-sys-arch}}
+	\caption{Simulation results for the network.}
+	\label{fig:sys-archs}
+\end{figure*}
+
+
+\subsubsection*{\textbf{Activitiy Diagram of Some Key Processes on the \textit{Software on the Tracker Chip}}}
+
+The activity diagrems can be shown in Fig. \ref{fig:activity-diagram}.
+
+\begin{figure*}[!ht]
+	\centering
+	\subfloat[Activitiy Diagram for SRS 1, 3, and 4]{\includegraphics[width=3.8in, valign=m]{./img/f5-activity-diagram-1.png}
+		\label{fig:ad-1}}
+	\hfil
+	\hspace{0.2in}
+	\subfloat[Activitiy Diagram for SRS 2]{\includegraphics[width=3in, valign=m]{./img/f6-activity-diagram-2png.png}
+		\label{fig:ad-2}}
+	\caption{Simulation results for the network.}
+	\label{fig:activity-diagram}
+\end{figure*}
+
+\subsection*{\textbf{D4-Define An Incremental Process}}
+
+The defined incremental process is shon in Fig. \ref{fig:incre-process}.
+The process is consist of the techniques like \textquote{Incremental Planning} and
+\textquote{Test First Development} from the \textit{Extreme Programming}.
+
+The SRS 2 is chosen to practice the \textit{Incremental Process} with XP techniques.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{./img/f7-incremental-process.png}
+	\caption{Incremental Process}
+	\label{fig:incre-process}
+\end{figure}
+
+\subsection*{\textbf{D5-Practice with the Extreme Programming}}
+
+
+\end{document}
+\endinput
