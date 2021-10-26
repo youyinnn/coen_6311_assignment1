@@ -87,7 +87,7 @@ The use cases diagram is shown in Fig. \ref{fig:use-cases}.
 Based on the user scenairo and the use cases,
 the software shall have the following software requirement specifications and their sub-requirements.
 
-To fulfill the described software product, the overall product should contain at least 3 software systems:
+To fulfill the described software product, the overall product should contains at least 3 software systems:
 
 \begin{itemize}
 	\item \textit{Software on the Tracker Chip}: which will be installed in the hardware chip to perform tracking features
@@ -115,7 +115,7 @@ More information of the system context architecture is shown in Fig. \ref{fig:sy
 
 \subsubsection*{\textbf{SRS for the Software on the Tracker Chip}}
 
-Total of 4 SRS are defined for the \textit{Software on the Tracker Chip}.
+Total of 4 SRSs are defined for the \textit{Software on the Tracker Chip}.
 In the scope of the assignment report, SRS 1, 2 and 3 are expanded with sub-requirements.
 
 \begin{itemize}
@@ -167,9 +167,14 @@ In the scope of the assignment report, SRS 1, 2 and 3 are expanded with sub-requ
 
 \subsubsection*{\textbf{System Architectures}}
 
-A top-down layer system architecture of the \textit{Software on the Tracker Chip} is shown in Fig. \ref{fig:chip-sys-arch}.
-The objects with vertical layer position mean that the top layer depends on the bottom layer.
-Notice that the obejcts in the gray box mean that they do not have hierarchy or layer relationship, they are in the same architecture level.
+Fig. \ref{fig:sys-archs}\subref{fig:chip-sys-arch} depicts the \textit{Software on the Tracker Chip}'s top-down layer system architecture.
+The top layer is dependent on the bottom layer in objects with vertical layer positions.
+The grey box indicates that the objects do not have a hierarchy or layer relationship,
+they are on the same architectural level.
+
+% A top-down layer system architecture of the \textit{Software on the Tracker Chip} is shown in Fig. \ref{fig:chip-sys-arch}.
+% The objects with vertical layer position mean that the top layer depends on the bottom layer.
+% Notice that the obejcts in the gray box mean that they do not have hierarchy or layer relationship, they are in the same architecture level.
 
 % \begin{figure}[!ht]
 % 	\centering
@@ -178,7 +183,7 @@ Notice that the obejcts in the gray box mean that they do not have hierarchy or 
 % 	\label{fig:chip-sys-arch}
 % \end{figure}
 
-Then a same top-down layer system architecture of the \textit{Cloud Server System} is shown in Fig \ref{fig:cloud-sys-arch}.
+Then a same top-down layer system architecture of the \textit{Cloud Server System} is shown in Fig \ref{fig:sys-archs}\subref{fig:cloud-sys-arch}.
 
 % \begin{figure}[!ht]
 % 	\centering
@@ -190,31 +195,34 @@ Then a same top-down layer system architecture of the \textit{Cloud Server Syste
 \begin{figure*}[!ht]
 	\centering
 	\subfloat[Architecture of the \textit{Software on the Tracker Chip}]
-	{\includegraphics[width=3.8in, valign=m]{./img/f3-chip-sys-architecture.png}}
-	\label{fig:chip-sys-arch}
+	{\includegraphics[width=3.8in, valign=m]{./img/f3-chip-sys-architecture.png}\label{fig:chip-sys-arch}}
 	\hfil
 	\hspace{0.2in}
 	\subfloat[Architecture of the \textit{Cloud Server System}]
-	{\includegraphics[width=3in, valign=m]{./img/f4-cloud-sys-architecture.png}
-		\label{fig:cloud-sys-arch}}
-	\caption{Simulation results for the network.}
+	{\includegraphics[width=3in, valign=m]{./img/f4-cloud-sys-architecture.png}\label{fig:cloud-sys-arch}}
+	% \caption{System Architectures}
+	\caption{
+		System Architectures:
+		\protect\subref{fig:chip-sys-arch}
+		\protect\subref{fig:cloud-sys-arch}
+	}
 	\label{fig:sys-archs}
 \end{figure*}
 
 
 \subsubsection*{\textbf{Activitiy Diagram of Some Key Processes on the \textit{Software on the Tracker Chip}}}
 
-The activity diagrems can be shown in Fig. \ref{fig:activity-diagram}.
+The activity diagrems are shown in Fig. \ref{fig:activity-diagram}.
 
 \begin{figure*}[!ht]
 	\centering
-	\subfloat[Activitiy Diagram for SRS 1, 3, and 4]{\includegraphics[width=3.8in, valign=m]{./img/f5-activity-diagram-1.png}
+	\subfloat[Activitiy Diagram of SRS 1, 3, and 4]{\includegraphics[width=3.8in, valign=m]{./img/f5-activity-diagram-1.png}
 		\label{fig:ad-1}}
 	\hfil
 	\hspace{0.2in}
-	\subfloat[Activitiy Diagram for SRS 2]{\includegraphics[width=3in, valign=m]{./img/f6-activity-diagram-2png.png}
+	\subfloat[Activitiy Diagram of SRS 2]{\includegraphics[width=3in, valign=m]{./img/f6-activity-diagram-2png.png}
 		\label{fig:ad-2}}
-	\caption{Simulation results for the network.}
+	\caption{Activity Diagrams of the SRS}
 	\label{fig:activity-diagram}
 \end{figure*}
 
@@ -228,7 +236,7 @@ To perform the incremental process, a loop starts at step 4
 and ends with step 7 when no unfinished tasks are left on the storyboard.
 Every task will start from defining the test cases and then developing and validating.
 
-The SRS 2 is chosen to practice the incremental process with XP techniques.
+The SRS 2 is chosen to practice the incremental process with XP methodologies.
 
 \begin{figure}[!ht]
 	\centering
@@ -261,11 +269,10 @@ SRS 2 can be partitioned as several story cards(tasks) which are shown in Table 
 \subsubsection*{\textbf{Finish the Task}}
 
 \textit{Task 1} is chosen to be presented in this report.
-But to perform the unit test, mocked sensor raw data is needed.
+However, mocked sensor raw data is required for the unit test.
 With the mock data, the console of the IDE will represent the display device
-that the client will use, and every raw data will be reconstructed to json data.
-This means that the task result will be validated manually
-by observing the console.
+that the client will use, and all raw data will be reconstructed to json data.
+This implies that the task result will be validated manually by observing the console.
 
 \newpage
 \textbf{Task 0}
@@ -277,13 +284,13 @@ The code will be located in \textquote{src/test/java/io/github/youyinnn/bo/chip/
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=0.65\textwidth]{./img/f8-task0-testcase.png}
-	\caption{Tast Cases of Generating Raw Data of GPS Tracker}
+	\caption{Test Cases of Generating Raw Data of GPS Tracker}
 	\label{fig:task0-testcase}
 \end{figure}
 
 In the first loop, the raw data did not contain the timestamp, so the test cases are not fulfilled
 since those data are displayed in a real-time situation.
-So the second loop was started, and the incremental code is shown in Fig. \ref{fig:incre-code-1}.
+As the result, a second loop was started, and the incremental code is presented in Fig. \ref{fig:incre-code-1}.
 
 \begin{figure}[!ht]
 	\centering
@@ -293,19 +300,22 @@ So the second loop was started, and the incremental code is shown in Fig. \ref{f
 \end{figure}
 
 The revised sample of the raw data is shown in \ref{fig:raw-data-sample}.
-Those data are located in \textquote{src/main/resources/data\_samples}.
+Those data files are located in \textquote{src/main/resources/data\_samples}.
 
 
 \textbf{Task 1}
 
 \begin{itemize}
-	\item \textbf{Test cases:} The test case for task 1 can be defined as Fig. \ref{fig:test-code-t1} is shown. Its location is \textquote{src/test/java/io/github/youyinnn/module/chip/ChipDataProcessorImplTest.java}.
+	\item \textbf{Test Cases:} The test cases for task 1 can be defined as Fig. \ref{fig:test-code-t1} is shown.
+	      Its location is \textquote{src/test/java/io/github/youyinnn/module/chip/ChipDataProcessorImplTest.java}.
 
-	\item \textbf{Code implementations:} After test cases defined, then the implementation of the \textit{ChipDataProcessor} was implemented
-	      which is \textit{ChipDataProcessorImpl} and is shown in Fig. \ref{fig:intf-impl}. The corresponding class diagram of the data objects is shown in Fig. \ref{fig:class-diagram}.
+	\item \textbf{Code Implementation:} After test cases defined, then the implementation of the \textit{ChipDataProcessor} was implemented
+	      which is \textit{ChipDataProcessorImpl} and is shown in Fig. \ref{fig:intf-impl}.
+	      The corresponding class diagrams of the data objects are shown in Fig. \ref{fig:class-diagram}.
 	      And their implementations are located in \textquote{src/main/java/io/github/youyinnn/bo/chip}.
 
-	\item \textbf{Validation:} After all the implementations were done, the test units were executed and they were all passed(shown in Fig. \ref{fig:test-result}).
+	\item \textbf{Validation:} After all the implementations were done, the test units were executed
+	      and they were all passed(shown in Fig. \ref{fig:test-result}).
 	      This means the task 1 was completed and the loop for this task was finished.
 \end{itemize}
 
@@ -343,7 +353,7 @@ Those data are located in \textquote{src/main/resources/data\_samples}.
 		\label{fig:t1-assertion}}
 	\subfloat[Test Unit]{\includegraphics[width=3.2in, valign=m]{./img/f13-t1-testcase-1-test-unit.png}
 		\label{fig:t1-test-unit}}
-	\caption{Tast Case Code of Task 1}
+	\caption{Test Case Code of Task 1}
 	\label{fig:test-code-t1}
 \end{figure}
 
