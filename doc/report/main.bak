@@ -82,7 +82,7 @@ The use cases diagram is shown in Fig. \ref{fig:use-cases}.
 	\label{fig:use-cases}
 \end{figure}
 
-\subsection*{\textbf{D2-Software Requirement Specification}}
+\subsection*{\textbf{D2-System Requirement Specification}}
 
 Based on the user scenairo and the use cases,
 the software shall have the following software requirement specifications and their sub-requirements.
@@ -102,7 +102,7 @@ To fulfill the described software product, the overall product should contains a
 This report will focus on the \textit{Software on the Tracker Chip}
 but also present part of the \textit{Cloud Server System} which is just for supplementary notes.
 The \textit{Client Application} will not be presented.
-Notice the SRS of the cloud system will be marked as \textit{S-SRS} for distinction.
+Notice the SRS of the cloud system will be marked as \textit{Server-SRS} for distinction.
 
 More information of the system context architecture is shown in Fig. \ref{fig:sys-context}.
 
@@ -115,7 +115,7 @@ More information of the system context architecture is shown in Fig. \ref{fig:sy
 
 \subsubsection*{\textbf{SRS for the Software on the Tracker Chip}}
 
-Total of 4 SRSs are defined for the \textit{Software on the Tracker Chip}.
+Total of 4 SRS are defined for the \textit{Software on the Tracker Chip}.
 In the scope of the assignment report, SRS 1, 2 and 3 are expanded with sub-requirements.
 
 \begin{itemize}
@@ -151,15 +151,15 @@ In the scope of the assignment report, SRS 1, 2 and 3 are expanded with sub-requ
 \subsubsection*{\textbf{SRS for the Cloud Server System}}
 
 \begin{itemize}
-	\item \textit{S-SRS 1.} The server system shall receive http request
+	\item \textit{Server-SRS 1.} The server system shall receive http request
 	      and maintain socket connection with multiple clent-end.
 
-	\item \textit{S-SRS 2.} The system shall maintain the relationship between client-ends or hardware chips.
+	\item \textit{Server-SRS 2.} The system shall maintain the relationship between client-ends or hardware chips.
 
-	\item \textit{S-SRS 3.} The system shall receive chips data instantly and organize them into database,
+	\item \textit{Server-SRS 3.} The system shall receive chips data instantly and organize them into database,
 	      and those data shall be analysed and pushed to the corresponding clent-end device.
 
-	\item \textit{S-SRS 4.} The system shall receive 'Parked' and 'Unparked' commands sent from a certain client-end
+	\item \textit{Server-SRS 4.} The system shall receive 'Parked' and 'Unparked' commands sent from a certain client-end
 	      and associate them with the ressorted hardware chip instance.
 \end{itemize}
 
@@ -228,7 +228,7 @@ The activity diagrems are shown in Fig. \ref{fig:activity-diagram}.
 
 \subsection*{\textbf{D4-Define An Incremental Process}}
 
-The defined incremental process is shon in Fig. \ref{fig:incre-process}.
+The defined incremental process is shown in Fig. \ref{fig:incre-process}.
 The process is consist of the techniques like \textquote{Incremental Planning} and
 \textquote{Test First Development} from the \textit{Extreme Programming}.
 
@@ -236,7 +236,7 @@ To perform the incremental process, a loop starts at step 4
 and ends with step 7 when no unfinished tasks are left on the storyboard.
 Every task will start from defining the test cases and then developing and validating.
 
-The SRS 2 is chosen to practice the incremental process with XP methodologies.
+SRS 2 is chosen to practice the incremental process with XP methodologies.
 
 \begin{figure}[!ht]
 	\centering
@@ -300,7 +300,7 @@ As the result, a second loop was started, and the incremental code is presented 
 \end{figure}
 
 The revised sample of the raw data is shown in \ref{fig:raw-data-sample}.
-Those data files are located in \textquote{src/main/resources/data\_samples}.
+Those data samples are located in \textquote{src/main/resources/data\_samples}.
 
 
 \textbf{Task 1}
