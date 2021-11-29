@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Random;
 import java.util.StringJoiner;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class RawDataMocker {
 
@@ -50,60 +51,90 @@ public class RawDataMocker {
         return topDegree + "." + getMantissa(15);
     }
 
-    private static String mockGpsDataSet(int bound) {
+    public static String mockGpsDataSet(int bound) {
         StringJoiner sj = new StringJoiner("");
         int setSize = RANDOM.nextInt(bound);
+        long currentTimeMillis = System.currentTimeMillis();
         if (setSize == 0)
             setSize++;
         for (int i = 0; i < setSize; i++) {
-            sj.add(String.valueOf(System.currentTimeMillis())); // incremental part in loop 2: adding timestamp
+            currentTimeMillis += RANDOM.nextInt(30 * 100);
+            sj.add(String.valueOf(currentTimeMillis)); // incremental part in loop 2: adding timestamp
             sj.add(" ");
             sj.add(mockGpsData());
-            try {
-                Thread.sleep(RANDOM.nextInt(30 * 100)); // incremental part in loop 2: mocking the time delay
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
         return sj.toString();
     }
 
-    private static String mockAccelerometerDataSet(int bound) {
+    public static String mockAccelerometerDataSet(int bound) {
         StringJoiner sj = new StringJoiner("");
         int setSize = RANDOM.nextInt(bound);
+        long currentTimeMillis = System.currentTimeMillis();
         if (setSize == 0)
             setSize++;
         for (int i = 0; i < setSize; i++) {
-            sj.add(String.valueOf(System.currentTimeMillis()));
+            currentTimeMillis += RANDOM.nextInt(30 * 100);
+            sj.add(String.valueOf(currentTimeMillis));
             sj.add(" ");
             sj.add(mockAccelerometerData());
-            try {
-                Thread.sleep(RANDOM.nextInt(30 * 100));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
         return sj.toString();
     }
 
-    private static String mockGyroscopicDataSet(int bound) {
+    public static String mockGyroscopicDataSet(int bound) {
         StringJoiner sj = new StringJoiner("");
         int setSize = RANDOM.nextInt(bound);
+        long currentTimeMillis = System.currentTimeMillis();
         if (setSize == 0)
             setSize++;
         for (int i = 0; i < setSize; i++) {
-            sj.add(String.valueOf(System.currentTimeMillis()));
+            currentTimeMillis += RANDOM.nextInt(30 * 100);
+            sj.add(String.valueOf(currentTimeMillis));
             sj.add(" ");
             sj.add(mockOneDimensionGyroscopicData()).add(" ")
                     .add(mockOneDimensionGyroscopicData()).add(" ")
                     .add(mockOneDimensionGyroscopicData()).add(System.lineSeparator());
-            try {
-                Thread.sleep(RANDOM.nextInt(30 * 100));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         }
         return sj.toString();
+    }
+
+    public static String[] mockUniversalDataSet(int bound) {
+        AtomicInteger setSize = new AtomicInteger(RANDOM.nextInt(bound));
+
+        if (setSize.get() == 0)
+            setSize.getAndIncrement();
+
+        long[] fixedTime = new long[setSize.get()];
+
+        for (int i = 0; i < setSize.get(); i++) {
+            if (i == 0) {
+                fixedTime[i] = System.currentTimeMillis();
+            } else {
+                fixedTime[i] = fixedTime[i - 1] + RANDOM.nextInt(30 * 100);
+            }
+        }
+
+        StringJoiner sj = new StringJoiner("");
+        for (int i = 0; i < setSize.get(); i++) {
+            sj.add(String.valueOf(fixedTime[i]));
+            sj.add(" ");
+            sj.add(mockGpsData());
+        }
+        StringJoiner sj2 = new StringJoiner("");
+        for (int i = 0; i < setSize.get(); i++) {
+            sj2.add(String.valueOf(fixedTime[i]));
+            sj2.add(" ");
+            sj2.add(mockAccelerometerData());
+        }
+        StringJoiner sj3 = new StringJoiner("");
+        for (int i = 0; i < setSize.get(); i++) {
+            sj3.add(String.valueOf(fixedTime[i]));
+            sj3.add(" ");
+            sj3.add(mockOneDimensionGyroscopicData()).add(" ")
+                    .add(mockOneDimensionGyroscopicData()).add(" ")
+                    .add(mockOneDimensionGyroscopicData()).add(System.lineSeparator());
+        }
+        return new String[]{sj.toString(), sj2.toString(), sj3.toString()};
     }
 
     @Test

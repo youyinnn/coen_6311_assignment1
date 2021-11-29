@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.29)  2 NOV 2021 19:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.9.29)  29 NOV 2021 14:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/main.tex
-(/Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/main.tex
+**/Users/yinnnyou/workspace/IdeaProjects/coen_6311_assignment1/doc/report2/main.tex
+(/Users/yinnnyou/workspace/IdeaProjects/coen_6311_assignment1/doc/report2/main.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18> (./IEEEtran.cls
+L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -21,11 +21,10 @@ LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 50
 (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-** ATTENTION: Single column mode is not typically used with IEEE publications.
 -- Using 8.5in x 11in (letter) paper.
 -- Using PDF output.
 \@IEEEnormalsizeunitybaselineskip=\dimen141
--- This is a 9 point document.
+-- This is a 10 point document.
 \CLASSINFOnormalsizebaselineskip=\dimen142
 \CLASSINFOnormalsizeunitybaselineskip=\dimen143
 \IEEEnormaljot=\dimen144
@@ -41,10 +40,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8.5> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
@@ -53,9 +48,13 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <14> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
@@ -64,6 +63,10 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 \IEEEquantizedlength=\dimen145
 \IEEEquantizedlengthdiff=\dimen146
@@ -246,25 +249,25 @@ Package csquotes Info: ... none found.
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count285
 \l__pdf_internal_box=\box55
-) (/Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/output/main.aux)
+) (/Users/yinnnyou/workspace/IdeaProjects/coen_6311_assignment1/doc/report2/output/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
 
--- Lines per column: 63 (exact).
+-- Lines per column: 56 (exact).
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count286
@@ -288,126 +291,103 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-<./img/f1-use-cases.png, id=1, 2517.405pt x 851.18pt>
-File: ./img/f1-use-cases.png Graphic file (type png)
-<use ./img/f1-use-cases.png>
-Package pdftex.def Info: ./img/f1-use-cases.png  used on input line 80.
-(pdftex.def)             Requested size: 412.80157pt x 139.56844pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 93.
+(Font)              <7> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 93.
+(Font)              <5> on input line 63.
+<./img/change-handling-process.png, id=1, 1743.51375pt x 1267.73625pt>
+File: ./img/change-handling-process.png Graphic file (type png)
+<use ./img/change-handling-process.png>
+Package pdftex.def Info: ./img/change-handling-process.png  used on input line 87.
+(pdftex.def)             Requested size: 464.39685pt x 337.67014pt.
+<./img/sys-context-model.png, id=3, 1285.80376pt x 876.27374pt>
+File: ./img/sys-context-model.png Graphic file (type png)
+<use ./img/sys-context-model.png>
+Package pdftex.def Info: ./img/sys-context-model.png  used on input line 116.
+(pdftex.def)             Requested size: 361.19843pt x 246.15721pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 93.
-<./img/f2-sys-context.png, id=3, 2790.425pt x 1280.785pt>
-File: ./img/f2-sys-context.png Graphic file (type png)
-<use ./img/f2-sys-context.png>
-Package pdftex.def Info: ./img/f2-sys-context.png  used on input line 111.
-(pdftex.def)             Requested size: 412.80157pt x 189.47113pt.
- [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/f1-use-cases.png>]
-<./img/f3-chip-sys-architecture.png, id=15, 1489.565pt x 959.585pt>
-File: ./img/f3-chip-sys-architecture.png Graphic file (type png)
-<use ./img/f3-chip-sys-architecture.png>
-Package pdftex.def Info: ./img/f3-chip-sys-architecture.png  used on input line 198.
-(pdftex.def)             Requested size: 274.6262pt x 176.90547pt.
-<./img/f4-cloud-sys-architecture.png, id=16, 1208.515pt x 1292.83pt>
-File: ./img/f4-cloud-sys-architecture.png Graphic file (type png)
-<use ./img/f4-cloud-sys-architecture.png>
-Package pdftex.def Info: ./img/f4-cloud-sys-architecture.png  used on input line 202.
-(pdftex.def)             Requested size: 216.81pt x 231.93001pt.
-<./img/f5-activity-diagram-1.png, id=17, 1943.26pt x 2115.905pt>
-File: ./img/f5-activity-diagram-1.png Graphic file (type png)
-<use ./img/f5-activity-diagram-1.png>
-Package pdftex.def Info: ./img/f5-activity-diagram-1.png  used on input line 220.
-(pdftex.def)             Requested size: 274.6262pt x 299.00128pt.
-<./img/f6-activity-diagram-2png.png, id=18, 1208.515pt x 1152.305pt>
-File: ./img/f6-activity-diagram-2png.png Graphic file (type png)
-<use ./img/f6-activity-diagram-2png.png>
-Package pdftex.def Info: ./img/f6-activity-diagram-2png.png  used on input line 224.
-(pdftex.def)             Requested size: 216.81pt x 206.72021pt.
-<./img/f7-incremental-process.png, id=19, 2886.785pt x 2268.475pt>
-File: ./img/f7-incremental-process.png Graphic file (type png)
-<use ./img/f7-incremental-process.png>
-Package pdftex.def Info: ./img/f7-incremental-process.png  used on input line 243.
-(pdftex.def)             Requested size: 464.39685pt x 364.90181pt.
+(Font)              <8> on input line 129.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 260.
- [2 <./img/f2-sys-context.png>] [3 <./img/f3-chip-sys-architecture.png> <./img/f4-cloud-sys-architecture.png> <./img/f5-activity-diagram-1.png> <./img/f6-activity-diagram-2png.png>]
-<./img/f8-task0-testcase.png, id=31, 707.64375pt x 474.77374pt>
-File: ./img/f8-task0-testcase.png Graphic file (type png)
-<use ./img/f8-task0-testcase.png>
-Package pdftex.def Info: ./img/f8-task0-testcase.png  used on input line 286.
-(pdftex.def)             Requested size: 335.39685pt x 225.02724pt.
- [4 <./img/f7-incremental-process.png> <./img/f8-task0-testcase.png>]
-<./img/f12-incremental-code-1.png, id=37, 824.07875pt x 315.1775pt>
-File: ./img/f12-incremental-code-1.png Graphic file (type png)
-<use ./img/f12-incremental-code-1.png>
-Package pdftex.def Info: ./img/f12-incremental-code-1.png  used on input line 297.
-(pdftex.def)             Requested size: 412.80157pt x 157.88171pt.
-<./img/f19-t1-test-result.png, id=38, 922.44624pt x 253.94875pt>
-File: ./img/f19-t1-test-result.png Graphic file (type png)
-<use ./img/f19-t1-test-result.png>
-Package pdftex.def Info: ./img/f19-t1-test-result.png  used on input line 324.
-(pdftex.def)             Requested size: 412.80157pt x 113.64426pt.
-<./img/f9-gps-data-sample.png, id=39, 515.9275pt x 306.14375pt>
-File: ./img/f9-gps-data-sample.png Graphic file (type png)
-<use ./img/f9-gps-data-sample.png>
-Package pdftex.def Info: ./img/f9-gps-data-sample.png  used on input line 332.
-(pdftex.def)             Requested size: 238.49121pt x 141.51451pt.
-<./img/f10-speed-data-sample.png, id=40, 474.77374pt x 309.155pt>
-File: ./img/f10-speed-data-sample.png Graphic file (type png)
-<use ./img/f10-speed-data-sample.png>
-Package pdftex.def Info: ./img/f10-speed-data-sample.png  used on input line 336.
-(pdftex.def)             Requested size: 216.81pt x 141.17992pt.
-<./img/f11-gyroscopic-data-sample.png, id=41, 650.43pt x 309.155pt>
-File: ./img/f11-gyroscopic-data-sample.png Graphic file (type png)
-<use ./img/f11-gyroscopic-data-sample.png>
-Package pdftex.def Info: ./img/f11-gyroscopic-data-sample.png  used on input line 339.
-(pdftex.def)             Requested size: 274.6262pt x 130.53293pt.
-<./img/f16-t1-testcase-4-intf.png, id=42, 658.46pt x 205.76875pt>
-File: ./img/f16-t1-testcase-4-intf.png Graphic file (type png)
-<use ./img/f16-t1-testcase-4-intf.png>
-Package pdftex.def Info: ./img/f16-t1-testcase-4-intf.png  used on input line 347.
-(pdftex.def)             Requested size: 289.07999pt x 90.33757pt.
-<./img/f14-t1-testcase-2-preparation.png, id=43, 696.6025pt x 499.8675pt>
-File: ./img/f14-t1-testcase-2-preparation.png Graphic file (type png)
-<use ./img/f14-t1-testcase-2-preparation.png>
-Package pdftex.def Info: ./img/f14-t1-testcase-2-preparation.png  used on input line 350.
-(pdftex.def)             Requested size: 317.98755pt x 228.17992pt.
-<./img/f15-t1-testcase-3-equal.png, id=44, 660.4675pt x 403.5075pt>
-File: ./img/f15-t1-testcase-3-equal.png Graphic file (type png)
-<use ./img/f15-t1-testcase-3-equal.png>
-Package pdftex.def Info: ./img/f15-t1-testcase-3-equal.png  used on input line 353.
-(pdftex.def)             Requested size: 274.6262pt x 167.78497pt.
-<./img/f13-t1-testcase-1-test-unit.png, id=45, 558.085pt x 262.9825pt>
-File: ./img/f13-t1-testcase-1-test-unit.png Graphic file (type png)
-<use ./img/f13-t1-testcase-1-test-unit.png>
-Package pdftex.def Info: ./img/f13-t1-testcase-1-test-unit.png  used on input line 355.
-(pdftex.def)             Requested size: 231.26378pt x 108.97517pt.
-<./img/f18-intf-impl.png, id=46, 726.715pt x 548.0475pt>
-File: ./img/f18-intf-impl.png Graphic file (type png)
-<use ./img/f18-intf-impl.png>
-Package pdftex.def Info: ./img/f18-intf-impl.png  used on input line 362.
-(pdftex.def)             Requested size: 361.19843pt x 272.40074pt.
-<./img/f17-class-diagram.png, id=47, 1774.63pt x 915.42pt>
-File: ./img/f17-class-diagram.png Graphic file (type png)
-<use ./img/f17-class-diagram.png>
-Package pdftex.def Info: ./img/f17-class-diagram.png  used on input line 369.
-(pdftex.def)             Requested size: 309.60315pt x 159.69804pt.
- [5 <./img/f12-incremental-code-1.png> <./img/f19-t1-test-result.png>] [6 <./img/f9-gps-data-sample.png> <./img/f10-speed-data-sample.png> <./img/f11-gyroscopic-data-sample.png>] [7 <./img/f16-t1-testcase-4-intf.png> <./img/f14-t1-testcase-2-preparation.png> <./img/f15-t1-testcase-3-equal.png> <./img/f13-t1-testcase-1-test-unit.png>] [8 <./img/f18-intf-impl.png> <./img/f17-class-diagram.png>] (/Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/output/main.aux) ) 
+(Font)              <6> on input line 129.
+<./img/sys-context-model-2.png, id=4, 831.105pt x 484.81125pt>
+File: ./img/sys-context-model-2.png Graphic file (type png)
+<use ./img/sys-context-model-2.png>
+Package pdftex.def Info: ./img/sys-context-model-2.png  used on input line 134.
+(pdftex.def)             Requested size: 232.19843pt x 135.45032pt.
+<./img/state-diagram.png, id=5, 1842.885pt x 680.5425pt>
+File: ./img/state-diagram.png Graphic file (type png)
+<use ./img/state-diagram.png>
+Package pdftex.def Info: ./img/state-diagram.png  used on input line 153.
+(pdftex.def)             Requested size: 412.80157pt x 152.43008pt.
+ [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+
+LaTeX Warning: Text page 2 contains only floats.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Warning: Text page 2 contains only floats.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 <./img/change-handling-process.png> <./img/sys-context-model.png>]
+<./img/observer-subject-pattern.png, id=19, 3091.55pt x 449.68pt>
+File: ./img/observer-subject-pattern.png Graphic file (type png)
+<use ./img/observer-subject-pattern.png>
+Package pdftex.def Info: ./img/observer-subject-pattern.png  used on input line 194.
+(pdftex.def)             Requested size: 464.39685pt x 67.54515pt.
+<./img/observer-impl.png, id=20, 712.6625pt x 570.13pt>
+File: ./img/observer-impl.png Graphic file (type png)
+<use ./img/observer-impl.png>
+Package pdftex.def Info: ./img/observer-impl.png  used on input line 208.
+(pdftex.def)             Requested size: 464.39685pt x 371.51965pt.
+<./img/subject-impl.png, id=21, 725.71124pt x 759.83875pt>
+File: ./img/subject-impl.png Graphic file (type png)
+<use ./img/subject-impl.png>
+Package pdftex.def Info: ./img/subject-impl.png  used on input line 215.
+(pdftex.def)             Requested size: 464.39685pt x 486.24876pt.
+<./img/messagesender.png, id=22, 512.91624pt x 673.51625pt>
+File: ./img/messagesender.png Graphic file (type png)
+<use ./img/messagesender.png>
+Package pdftex.def Info: ./img/messagesender.png  used on input line 231.
+(pdftex.def)             Requested size: 412.80157pt x 542.06126pt.
+<./img/riskdetector.png, id=23, 538.01pt x 208.78pt>
+File: ./img/riskdetector.png Graphic file (type png)
+<use ./img/riskdetector.png>
+Package pdftex.def Info: ./img/riskdetector.png  used on input line 238.
+(pdftex.def)             Requested size: 412.80157pt x 160.19402pt.
+
+
+** Conference Paper **
+Before submitting the final camera ready copy, remember to:
+
+ 1. Manually equalize the lengths of two columns on the last page
+ of your paper;
+
+ 2. Ensure that any PostScript and/or PDF output post-processing
+ uses only Type 1 fonts and that every step in the generation
+ process uses the appropriate paper size.
+
+[3 <./img/sys-context-model-2.png>] [4 <./img/state-diagram.png> <./img/observer-subject-pattern.png>] [5 <./img/observer-impl.png>] [6 <./img/subject-impl.png>] [7 <./img/messagesender.png>] [8 <./img/riskdetector.png>] (/Users/yinnnyou/workspace/IdeaProjects/coen_6311_assignment1/doc/report2/output/main.aux) ) 
 Here is how much of TeX's memory you used:
- 6480 strings out of 478994
- 109513 string characters out of 5858184
- 419999 words of memory out of 5000000
- 23897 multiletter control sequences out of 15000+600000
- 438499 words of font info for 85 fonts, out of 8000000 for 9000
+ 6383 strings out of 478994
+ 106906 string characters out of 5858184
+ 425225 words of memory out of 5000000
+ 23815 multiletter control sequences out of 15000+600000
+ 436187 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,9n,74p,321b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/yinnnyou/IdeaProjects/youyinnn/coen_6311_assignment1/doc/report/output/main.pdf (8 pages, 2270312 bytes).
+ 68i,8n,74p,319b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on /Users/yinnnyou/workspace/IdeaProjects/coen_6311_assignment1/doc/report2/output/main.pdf (8 pages, 1160086 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
